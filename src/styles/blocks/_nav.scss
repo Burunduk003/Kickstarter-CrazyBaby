@@ -1,0 +1,31 @@
+.nav {
+  max-width: 800px;
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+    @media (max-width: 767px) {
+      & {
+        flex-direction: column;
+        gap: 40px;
+        padding: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: #eee;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #333;
+    transition: font-weight 0.2s, color 0.2s;
+
+    &:hover {
+      color: #131313;
+      font-weight: 600;
+    }
+  }
+}

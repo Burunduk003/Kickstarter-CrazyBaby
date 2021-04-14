@@ -1,0 +1,43 @@
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  transition: transform 1s;
+
+  @media (max-width: 1279px) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 767px) {
+    & {
+      grid-template-columns: repeat(4, 82vw);
+    }
+  }
+
+  &__description {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+  }
+
+  &__img {
+    justify-self: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: #333;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  &__about {
+    text-align: center;
+    padding: 0 15px;
+    color: #7c7c7c;
+  }
+}

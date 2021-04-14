@@ -1,0 +1,42 @@
+.carousel {
+
+  display: none;
+
+  @media (max-width: 767px) {
+    & {
+      display: block;
+    }
+  }
+
+  &__arrows {
+    width: min-content;
+    margin: 8px auto;
+    display: flex;
+  }
+  
+
+  &__left {
+    width: 48px;
+    height: 13px;
+    background-image: url("../images/left.svg");
+  }
+  &__right {
+    width: 48px;
+    height: 13px;
+    background-image: url("../images/right.svg");
+  }
+
+  &__count {
+    text-align: center;
+
+    &-current {
+      font-size: 16px;
+      color: #333;
+    }
+
+    &-total {
+      font-size: 11px;
+      color: #bdbdbd;
+    }
+  }
+}

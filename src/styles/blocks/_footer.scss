@@ -1,0 +1,25 @@
+.footer {
+  &__logo {
+    display: block;
+    margin: 0 auto 60px;
+  }
+
+  &__social-icons {
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 36px;
+  }
+
+  &__link {
+    margin: 0 20px;
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #bdbdbd;
+    margin-bottom: 100px;
+  }
+}

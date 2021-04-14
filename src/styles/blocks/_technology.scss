@@ -1,0 +1,20 @@
+.technology {
+  overflow: hidden;
+
+  &__wrapper {
+    transition: transform 1s;
+  }
+
+  &__title {
+    font-size: 56px;
+    color: #333;
+    margin-left: 19%;
+    margin-bottom: 100px;
+  }
+
+  &__img {
+    width: 1230px;
+    margin-bottom: 50px;
+
+  }
+}

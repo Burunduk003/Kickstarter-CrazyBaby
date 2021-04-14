@@ -1,0 +1,19 @@
+.menu {
+
+  transition: right 400ms;
+
+  @media (max-width: 767px) {
+    & {
+      display: none;
+      position: absolute;
+      top: -15px;
+      right: -240px;
+      width: 50%;
+    }
+  }
+
+  &--move {
+    display: block;
+    right: 0;
+  }
+}

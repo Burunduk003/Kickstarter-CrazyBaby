@@ -1,6 +1,22 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "./utils";
+@import "./blocks/header";
+@import "./blocks/content";
+@import "./reset";
+@import "./blocks/advantages";
+@import "./blocks/nav";
+@import "./blocks/menu";
+@import "./blocks/carousel";
+@import "./blocks/wrapper";
+@import "./blocks/video";
+@import "./blocks/design";
+@import "./blocks/technology";
+@import "./blocks/CEO";
+@import "./blocks/features";
+@import "./blocks/contacts";
+@import "./blocks/footer";
 
 body {
   background: $c-gray;
