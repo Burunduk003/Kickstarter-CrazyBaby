@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="icon" href="./images/favicon.png">
+    <script type="text/javascript" src="scripts/main.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__top">
-        <img
-          src="./images/logo.svg"
-          alt="crazybaby-logo"
-          class="header__logo"
-        >
+        <a href="#" class="header__logo">
+          <img
+            src="./images/logo.svg"
+            alt="crazybaby-logo"
+          >
+        </a>
         <div class="header__top-lincks">
-          <a href="#" class="header__specs">Specs</a>
+          <a href="#specs" class="header__specs">Specs</a>
           <div class="language-toggler header__language-toggler">
             <a href="#" class="header__lang">EN</a>
             /
-            <a href="#" class="header__lang">UA</a>
+            <a href="#" class="header__lang-two">UA</a>
           </div>
-          <a href="#" class="header__buy-button">Buy</a>
+          <a href="#contacts" class="header__buy-button">Buy</a>
         </div>
         <div class="header__mobile-menu">
           <a
@@ -42,31 +45,41 @@
           </p>
         </div>
         <div class="header__photo-wrappper">
-          <img
-            src="./images/speakers.png"
-            alt="speakers"
-            class="header__photo"
-          >
+          <picture>
+            <source media="(max-width: 767px)" srcset="./images/speakers2.jpg">
+            <img
+              src="./images/speakers.png"
+              alt="speakers"
+              class="header__photo"
+            >
+          </picture>
         </div>
       </div>
+      <a href="#contacts" class="buy">
+        <img
+          src="./images/cart.svg"
+          alt="buy"
+          class="buy__cart"
+        >
+      </a>
       <menu class="menu header__menu">
         <nav class="nav menu__nav">
           <a href="#" class="nav_close"></a>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">OUR STORY</a>
+              <a href="#design" class="nav__link">OUR STORY</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">ABOUT US</a>
+              <a href="#CEO" class="nav__link">ABOUT US</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">TECHNOLOGY</a>
+              <a href="#tech" class="nav__link">TECHNOLOGY</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">FEATURES</a>
+              <a href="#specs" class="nav__link">FEATURES</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">GET IN TOUCH</a>
+              <a href="#contacts" class="nav__link">GET IN TOUCH</a>
             </li>
           </ul>
         </nav>
@@ -138,16 +151,16 @@
         </div>
       </div>
     </header>
+    <section class="video content__video">
+      <img
+        src="./images/video.png"
+        alt="speakers"
+        class="video__img"
+      >
+      <div class="video__play"></div>
+    </section>
     <main class="content">
-      <section class="video content__video">
-        <img
-          src="./images/video.png"
-          alt="speakers"
-          class="video__img"
-        >
-        <div class="video__play"></div>
-      </section>
-      <section class="design content__design">
+      <section class="design content__design" id="design">
         <h2 class="design__title">
           DESIGNED&#160;FOR<br>THE&#160;FUTURE
         </h2>
@@ -164,11 +177,11 @@
             <p class="design__description">
               In 2014, a group of geeky industrial designers, engineering veterans and acoustic experts formed crazybaby. This is a bunch of passionate people who are crazy enough to think they can challenge the industry with disruptive audio products.
             </p>
-            <a href="#" class="design__link">See more about us</a>
+            <a href="https://www.kickstarter.com/projects/lunabycrazybaby/luna-by-crazybaby-revolutionary-wireless-speaker" class="design__link">See more about us</a>
           </div>
         </div>
       </section>
-      <section class="technology content__technology">
+      <section class="technology content__technology" id="tech">
         <h2 class="technology__title">
           Technology
         </h2>
@@ -179,7 +192,7 @@
             class="technology__img"
           >
         </div>
-        <div class="carousel">
+        <div class="carousel technology__carousel">
           <div class="carousel__arrows">
             <div class="carousel__left" id="left"></div>
             <div class="carousel__right" id="right"></div>
@@ -190,7 +203,7 @@
           </div>
         </div>
       </section>
-      <section class="CEO content__CEO">
+      <section class="CEO content__CEO" id="CEO">
         <div class="CEO__wrapper">
           <p class="CEO__review">
             It really took me by surprise honestly to have such full beautiful sound that coming out of this small compact device. And with the brush aluminum surface, it feels so familiar. Like my iPhone.
@@ -208,7 +221,7 @@
           </p>
         </div>
       </section>
-      <section class="features content__features">
+      <section class="features content__features" id="specs">
         <h2 class="features__title">
           FEATURES
         </h2>
@@ -294,7 +307,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts content__contacts">
+      <section class="contacts content__contacts" id="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">
             DO YOU HAVE ANY<br>QUESTIONS?
@@ -319,11 +332,20 @@
       </section>
     </main>
     <footer class="footer">
-      <img
-        src="./images/logo.svg"
-        alt="logo"
-        class="footer__logo"
-      >
+      <a href="#" class="footer__logo-link">
+        <img
+          src="./images/logo.svg"
+          alt="logo"
+          class="footer__logo"
+        >
+      </a>
+      <a href="#" class="footer__top-link">
+        <img
+          src="./images/top.svg"
+          alt="go-to-top"
+          class="footer__go-to-top"
+        >
+      </a>
       <div class="footer__soc-icons">
         <a href="https://www.facebook.com/Kickstarter/" class="footer__link">
           <img src="./images/facebook.svg" alt="facebook">
@@ -339,6 +361,5 @@
         © 2019 All rights reserved. Terms of Use & Privacy Policy
       </p>
     </footer>
-    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

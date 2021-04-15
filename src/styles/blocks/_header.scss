@@ -10,10 +10,8 @@
     align-items: center;
     margin-bottom: 89px;
 
-    @media (max-width: 767px) {
-      & {
-        margin-bottom: 0;
-      }
+    @include _767 {
+      margin-bottom: 0;
     }
   }
 
@@ -28,10 +26,8 @@
     justify-items: center;
     align-items: center;
 
-    @media (max-width: 767px) {
-      & {
-        display: none;
-      }
+    @include _767 {
+      display: none;
     }
   }
 
@@ -44,31 +40,40 @@
 
   &__lang {
     line-height: 18px;
-    color: #333;
+    color: $basic-black;
     text-decoration: none;
+
+    &-two {
+      color: $darck-grey;
+      text-decoration: none;
+    }
   }
 
   &__buy-button {
     display: block;
     width: 102px;
     height: 48px;
-    background-color: #333;
+    background-color: $basic-black;
     text-align: center;
     line-height: 48px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    transition: background-color 400ms, box-shadow 400ms;
+
+    &:hover {
+      background-color: #131313;
+      box-shadow: $shadow;
+    }
   }
 
   &__mobile-menu {
     display: none;
     justify-self: end;
 
-    @media (max-width: 767px) {
-      & {
-        display: block;
-        z-index: 1;
-      }
+    @include _767 {
+      display: block;
+      z-index: 1;
     }
 
     &-link {
@@ -76,7 +81,7 @@
       display: block;
       height: 2px;
       width: 20px;
-      background-color: #333;
+      background-color: $basic-black;
       border-radius: 1px;
       transition: width 0.2s;
 
@@ -87,7 +92,7 @@
       &::before {
         content: "";
         position: absolute;
-        background: #333;
+        background: $basic-black;
         right: 0;
         bottom: 6.5px;
         width: 20px;
@@ -100,7 +105,7 @@
       &::after {
         content: "";
         position: absolute;
-        background: #333;
+        background: $basic-black;
         right: 0;
         top: 6.5px;
         width: 20px;
@@ -127,36 +132,32 @@
     grid-template-columns: 0.8fr 2.2fr;
     margin-bottom: 130px;
 
-    @media (max-width: 767px) {
-      & {
-        grid-template-columns: repeat(1, 1fr);
-      }
+    @include _767 {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
   &__main {
     font-size: calc(44px + 20 * (100vw - 320px) / 1120);
-    color: #333;
+    color: $basic-black;
     text-transform: uppercase;
     font-weight: 700;
     margin: 19% 0;
-    @media (max-width: 767px) {
-      & {
-        text-align: center;
-      }
+
+    @include _767 {
+      text-align: center;
     }
   }
 
   &__description {
     width: 72%;
     line-height: 24px;
-    color: #333;
+    color: $basic-black;
 
-    @media (max-width: 767px) {
-      & {
-        width: 100%;
-        text-align: center;
-      }
+    @include _767 {
+      max-width: 300px;
+      text-align: center;
+      margin: 0 auto;
     }
   }
 
@@ -166,21 +167,22 @@
     
     min-height: 245px;
 
-    @media (max-width: 767px) {
-      & {
-        grid-column: 1;
-        grid-row: 1;
-      }
+    @include _767 {
+      grid-column: 1;
+      grid-row: 1;
     }
-    
   }
 
   &__photo {
     position: absolute;
-    width: 100%;
+    width: 82vw;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: left;
+
+    @include _767 {
+      object-position: center;
+    }
   }
 
   &__menu {

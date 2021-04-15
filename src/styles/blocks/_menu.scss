@@ -1,19 +1,17 @@
 .menu {
 
-  transition: right 400ms;
+  transition: 400ms;
 
-  @media (max-width: 767px) {
-    & {
-      display: none;
-      position: absolute;
-      top: -15px;
-      right: -240px;
-      width: 50%;
-    }
+  @include _767 {
+    display: none;
+    position: absolute;
+    top: -15px;
+    right: -240px;
   }
 
   &--move {
     display: block;
+    width: 62%;
     right: 0;
   }
 }

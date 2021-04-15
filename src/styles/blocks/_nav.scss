@@ -3,25 +3,23 @@
   margin: 0 auto;
 
   &__list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     list-style: none;
 
-    @media (max-width: 767px) {
-      & {
-        flex-direction: column;
-        gap: 40px;
-        padding: 10px;
-        border-bottom-left-radius: 10px;
-        background-color: #eee;
-      }
+    @include _767 {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+      padding: 10px;
+      border-bottom-left-radius: 10px;
+      background-color: #eee;
     }
   }
 
   &__link {
     text-decoration: none;
-    color: #333;
-    transition: font-weight 0.2s, color 0.2s;
+    color: $basic-black;
+    transition: font-weight 0.2s, color 0.4s;
 
     &:hover {
       color: #131313;

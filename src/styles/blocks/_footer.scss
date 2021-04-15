@@ -1,25 +1,35 @@
 .footer {
+  position: relative;
+
   &__logo {
     display: block;
-    margin: 0 auto 60px;
+
+    &-link {
+      display: block;
+      width: max-content;
+      margin: 0 auto 60px;
+    }
   }
 
-  &__social-icons {
+  &__top-link {
+    position: absolute;
+    bottom: 85%;
+    right: 10%;
+  }
+
+  &__soc-icons {
     display: grid;
-    grid-template-columns: min-content min-content min-content;
+    grid-template-columns: repeat(3, min-content);
+    gap: 20px;
     justify-content: center;
     justify-items: center;
     margin-bottom: 36px;
   }
 
-  &__link {
-    margin: 0 20px;
-  }
-
   &__copyright {
     text-align: center;
     font-size: 14px;
-    color: #bdbdbd;
+    color: $ultralight-grey;
     margin-bottom: 100px;
   }
 }

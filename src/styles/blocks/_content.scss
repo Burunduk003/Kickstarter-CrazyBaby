@@ -2,26 +2,11 @@
   margin: 0 auto;
   width: 82%;
 
-  &__video {
-    margin-bottom: 150px;
-  }
-
-  &__design {
-    margin-bottom: 150px;
-  }
-
-  &__technology {
-    margin-bottom: 150px;
-  }
-
-  &__CEO {
-    margin-bottom: 150px;
-  }
-
-  &__features {
-    margin-bottom: 150px;
-  }
-
+  &__video,
+  &__design,
+  &__technology,
+  &__CEO,
+  &__features,
   &__contacts {
     margin-bottom: 150px;
   }

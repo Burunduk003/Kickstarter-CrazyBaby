@@ -7,33 +7,26 @@
     display: grid;
     grid-template-columns: 60% 40%;
 
-    @media (max-width: 1200px) {
-      & {
-        width: 100%;
-        margin: 0;
-      }
+    @include _1200 {
+      width: 100%;
+      margin: 0;
     }
 
-    @media (max-width: 767px) {
-      & {
-        grid-template-columns: repeat(1, 1fr);
-      }
+    @include _767 {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
   &__title {
     position: absolute;
     left: 51%;
-    font-size: 56px;
-    color: #333;
+    @extend %h2;
     z-index: 1;
 
-    @media (max-width: 767px) {
-      & {
-        position: static;
-        margin: 0 auto 50px;
-        font-size: 37px;
-      }
+    @include _767 {
+      position: static;
+      margin: 0 auto 50px;
+      font-size: 33px;
     }
   }
 
@@ -47,26 +40,25 @@
   &__description {
     margin: 50% 8% 8%;
     font-size: 16px;
-    color: #7c7c7c;
+    color: $light-grey;
   }
 
   &__link {
     position: relative;
     margin-left: 8%;
     font-size: 12px;
-    color: #0db2b3;
+    color: $turquoise;
     text-decoration: none;
     text-transform: uppercase;
 
     &::after {
       content: "";
       position: absolute;
-      background: #0db2b3;
+      background: $turquoise;
       left: 0;
       top: 18px;
       width: 50px;
       height: 1px;
     }
   }
-
 }

@@ -1,14 +1,11 @@
 .contacts {
 
   &__title {
-    font-size: 56px;
-    color: #333;
+    @extend %h2;
 
-    @media (max-width: 767px) {
-      & {
-        font-size: 37px;
-        margin-bottom: 30px;
-      }
+    @include _767 {
+      font-size: 37px;
+      margin-bottom: 30px;
     }
   }
 
@@ -16,10 +13,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    @media (max-width: 767px) {
-      & {
-        grid-template-columns: 1fr;
-      }
+    @include _767 {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -28,13 +23,13 @@
     height: 48px;
     padding-left: 30px;
     margin-bottom: 19px;
-    background-color: #f6f6f6;
+    background-color: $c-gray;
     outline: none;
-    border: 1px solid #828282;
+    border: 1px solid $darck-grey;
     font-size: 16px;
     line-height: 48px;
     font-weight: 400;
-    color: #bdbdbd;
+    color: $ultralight-grey;
   }
 
   &__message {
@@ -43,12 +38,12 @@
     padding: 16px 30px;
     margin-bottom: 30px;
     resize: none;
-    background-color: #f6f6f6;
+    background-color: $c-gray;
     outline: none;
-    border: 1px solid #828282;
+    border: 1px solid $darck-grey;
     font-size: 16px;
     font-weight: 400;
-    color: #bdbdbd;
+    color: $ultralight-grey;
   }
 
   &__button {
@@ -56,7 +51,7 @@
     width: 102px;
     height: 48px;
     color: #fff;
-    background-color: #0db2b3;
+    background-color: $turquoise;
     border: none;
     transition: background-color 1s;
   }

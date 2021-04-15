@@ -6,15 +6,32 @@
   }
 
   &__title {
-    font-size: 56px;
-    color: #333;
+    @extend %h2;
+    text-transform: uppercase;
     margin-left: 19%;
     margin-bottom: 100px;
+
+    @include _767 {
+      margin-left: 0;
+      margin-bottom: 20px;
+      font-size: 37px;
+    }
   }
 
   &__img {
-    width: 1230px;
+    width: 82vw;
     margin-bottom: 50px;
 
+    @include _1000 {
+      width: 164vw;
+    }
+  }
+
+  &__carousel {
+    display: none;
+
+    @include _1000 {
+      display: block;
+    }
   }
 }

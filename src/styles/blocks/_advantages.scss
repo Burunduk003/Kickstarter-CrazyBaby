@@ -4,21 +4,25 @@
   justify-items: center;
   transition: transform 1s;
 
-  @media (max-width: 1279px) {
-    & {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  @include _1279 {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 767px) {
-    & {
-      grid-template-columns: repeat(4, 82vw);
-    }
+  @include _767 {
+    grid-template-columns: repeat(4, 82vw);
   }
 
   &__description {
     display: grid;
     grid-template-rows: 1fr 1fr 2fr;
+
+    @include _1279 {
+      max-width: 400px;
+    }
+
+    @include _767 {
+      max-width: 300px;
+    }
   }
 
   &__img {
@@ -27,7 +31,7 @@
 
   &__title {
     font-size: 24px;
-    color: #333;
+    color: $basic-black;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
@@ -38,6 +42,6 @@
   &__about {
     text-align: center;
     padding: 0 15px;
-    color: #7c7c7c;
+    color: $light-grey;
   }
 }

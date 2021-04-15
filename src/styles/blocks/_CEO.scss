@@ -12,7 +12,7 @@
   &__review {
     text-align: center;
     font-size: 24px;
-    color: #333;
+    color: $basic-black;
     margin-bottom: 40px;
   }
 
@@ -24,7 +24,7 @@
   &__name {
     text-align: center;
     font-size: 16px;
-    color: #333;
+    color: $basic-black;
     font-weight: 700;
     margin-bottom: 5px;
   }
@@ -32,6 +32,6 @@
   &__position {
     text-align: center;
     font-size: 14px;
-    color: #7c7c7c;
+    color: $light-grey;
   }
 }
