@@ -7,3 +7,78 @@
   font-size: 56px;
   color: $basic-black;
 }
+
+%description {
+  position: absolute;
+  &:hover::after {
+    box-sizing: border-box;
+    width: 114px;
+    height: 227px;
+    padding-top: 180px;
+    position: absolute;
+    top: 74px;
+    left: 24px;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+    color: #333;
+    text-align: end;
+
+    @include _767 {
+      padding-top: 100px;
+      height: 150px;
+    }
+    
+  }
+
+  &:hover::before {
+    position: absolute;
+    top: 298px;
+    left: 75px;
+    content: "";
+    width: 63px;
+    height: 5px;
+    background: #333;
+
+    @include _767 {
+      top: 221px;
+    }
+  }
+}
+
+%description-type-2 {
+  position: absolute;
+  &:hover::after {
+    box-sizing: border-box;
+    width: 114px;
+    height: 227px;
+    padding-top: 180px;
+    position: absolute;
+    top: 74px;
+    right: 24px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+    color: #333;
+    text-align: start;
+
+    @include _767 {
+      padding-top: 100px;
+      height: 150px;
+    }
+  }
+
+  &:hover::before {
+    position: absolute;
+    top: 298px;
+    right: 75px;
+    content: "";
+    width: 63px;
+    height: 5px;
+    background: #333;
+
+    @include _767 {
+      top: 221px;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 .header {
 
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 25px 9%;
   overflow-x: hidden;
 
@@ -176,6 +178,7 @@
   &__photo {
     position: absolute;
     width: 82vw;
+    max-width: 1180px;
     height: 100%;
     object-fit: contain;
     object-position: left;

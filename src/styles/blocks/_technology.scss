@@ -2,6 +2,7 @@
   overflow: hidden;
 
   &__wrapper {
+    position: relative;
     transition: transform 1s;
   }
 
@@ -20,11 +21,17 @@
 
   &__img {
     width: 82vw;
+    max-width: 1440px;
     margin-bottom: 50px;
 
     @include _1000 {
       width: 164vw;
+      max-width: unset;
     }
+  }
+
+  &__height {
+    height: 120px;
   }
 
   &__carousel {
@@ -32,6 +39,190 @@
 
     @include _1000 {
       display: block;
+    }
+  }
+
+  &__description {
+    height: 48px;
+    width: 48px;
+    background-color: $turquoise;
+    border-radius: 24px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 30px;
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #131313;
+    }
+
+    &--1 {
+      top: 45%;
+      left: 10%;
+      @extend %description;
+
+      @include _1000 {
+        top: 50%;
+        left: 20%;
+      }
+
+      &:hover::after {
+        content: "Front cover";
+      }
+    }
+
+    &--2 {
+      top: 40%;
+      left: 20%;
+      @extend %description;
+
+      @include _1000 {
+        top: 40%;
+        left: 40%;
+      }
+
+      &:hover::after {
+        content: "Ring Ornament";
+      }
+    }
+
+    &--3 {
+      top: 39%;
+      left: 28%;
+      @extend %description;
+
+      @include _1000 {
+        top: 45%;
+        left: 55%;
+      }
+
+      &:hover::after {
+        content: "Illumination belt";
+      }
+    }
+
+    &--4 {
+      top: 38%;
+      left: 37%;
+      @extend %description-type-2;
+
+      @include _1000 {
+        top: 40%;
+        left: 74%;
+      }
+
+      &:hover::after {
+        line-height: 20px;
+        content: "Seal cover for sound chamber";
+      }
+    }
+
+    &--5 {
+      top: 40%;
+      left: 43%;
+      @extend %description-type-2;
+
+      @include _1000 {
+        top: 50%;
+        left: 88%;
+      }
+
+      &:hover::after {
+        line-height: 20px;
+        content: "Light guiding component";
+      }
+    }
+
+    &--6 {
+      top: 20%;
+      left: 50%;
+      @extend %description;
+
+      @include _1000 {
+        top: 20%;
+        left: 102%;
+      }
+
+      &:hover::after {
+        content: "Full range driver";
+      }
+    }
+
+    &--7 {
+      top: 30%;
+      left: 61%;
+      @extend %description;
+
+      @include _1000 {
+        top: 35%;
+        left: 120%;
+      }
+
+      &:hover::after {
+        content: "Mainboard PCB";
+      }
+    }
+
+    &--8 {
+      top: 26%;
+      left: 77%;
+      @extend %description-type-2;
+
+      @include _1000 {
+        top: 26%;
+        left: 150%;
+      }
+
+      &:hover::after {
+        content: "Aluminium casing";
+      }
+    }
+
+    &--9 {
+      top: 20%;
+      left: 85%;
+      @extend %description-type-2;
+
+      @include _1000 {
+        top: 20%;
+        left: 168%;
+      }
+
+      &:hover::after {
+        content: "Back cover";
+      }
+    }
+
+    &--10 {
+      top: 30%;
+      left: 90%;
+      @extend %description-type-2;
+
+      @include _1000 {
+        top: 30%;
+        left: 178%;
+      }
+
+      &:hover::after {
+        line-height: 20px;
+        content: "Control button ring ornament";
+      }
+    }
+
+    &--11 {
+      top: 20%;
+      left: 92%;
+      @extend %description-type-2;
+
+      @include _1000 {
+        top: 20%;
+        left: 185%;
+      }
+
+      &:hover::after {
+        content: "Transparent logo";
+      }
     }
   }
 }

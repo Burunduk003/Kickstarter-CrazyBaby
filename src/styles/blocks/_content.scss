@@ -1,13 +1,31 @@
 .content {
+  max-width: 1440px;
   margin: 0 auto;
   width: 82%;
 
   &__video,
   &__design,
-  &__technology,
   &__CEO,
   &__features,
   &__contacts {
     margin-bottom: 150px;
+
+    @include _1000 {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__technology {
+    @include _1000 {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__design {
+    margin-top: 150px;
+
+    @include _1000 {
+      margin-top: 70px;
+    }
   }
 }

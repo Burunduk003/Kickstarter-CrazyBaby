@@ -23,6 +23,10 @@
     @extend %h2;
     z-index: 1;
 
+    @include _1000 {
+      font-size: 45px;
+    }
+
     @include _767 {
       position: static;
       margin: 0 auto 50px;
@@ -41,6 +45,10 @@
     margin: 50% 8% 8%;
     font-size: 16px;
     color: $light-grey;
+
+    @include _767 {
+      margin: 10% 8% 8%;
+    }
   }
 
   &__link {
