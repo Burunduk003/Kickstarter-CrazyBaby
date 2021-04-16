@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     right.addEventListener('click', () => {
       const width = slidesField.clientWidth;
 
-      if (move === width * (slidesCount - 1)) {
-        move = 0;
-        slideIndex = 1;
-      } else {
+      if (slideIndex < slidesCount) {
         move += width;
         slideIndex++;
+      } else if (slideIndex === slidesCount) {
+        move = 0;
+        slideIndex = 1;
       }
 
       if (slideIndex === slidesCount) {
@@ -74,10 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
     left.addEventListener('click', () => {
       const width = slidesField.clientWidth;
 
-      if (move === 0) {
+      if (slideIndex === 1) {
         move = width * (slidesCount - 1);
         slideIndex = slidesCount;
-      } else {
+      } else if (slideIndex <= slidesCount) {
         move -= width;
         slideIndex--;
       }
