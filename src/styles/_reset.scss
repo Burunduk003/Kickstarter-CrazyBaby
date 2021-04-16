@@ -15,7 +15,23 @@ input,
 textarea {
   margin: 0;
   padding: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   scroll-behavior: smooth;
+}
+
+::-webkit-input-placeholder {
+  color: $ultralight-grey;
+}
+
+::-moz-placeholder {
+  color: $ultralight-grey;
+}
+
+:-moz-placeholder {
+  color: $ultralight-grey;
+}
+
+:-ms-input-placeholder {
+  color: $ultralight-grey;
 }

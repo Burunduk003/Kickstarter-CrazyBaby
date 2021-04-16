@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   );
 
-  function nextSlide(right, left, slide, slidesField, slidesCount) {
+  function moveSlides(right, left, slide, slidesField, slidesCount) {
     let move = 0;
     let slideIndex = 1;
 
@@ -57,19 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
       slide.textContent = `0${slideIndex}`;
       slidesField.style.transform = `translateX(-${move}px)`;
     });
-  }
-
-  nextSlide(advantagesNext, advantagesPrevious,
-    advantagesCurrent, advantagesSlidesField, 4);
-  nextSlide(techNext, techPrevious, techCurrent, techSlidesField, 2);
-
-  nextSlide(featuresNext, featuresPrevious,
-
-    featuresCurrent, featuresSlidesField, 3);
-
-  function previousSlide(left, right, slide, slidesField, slidesCount) {
-    let move = 0;
-    let slideIndex = 1;
 
     left.addEventListener('click', () => {
       const width = slidesField.clientWidth;
@@ -104,13 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  previousSlide(advantagesPrevious, advantagesNext,
+  moveSlides(advantagesNext, advantagesPrevious,
     advantagesCurrent, advantagesSlidesField, 4);
+  moveSlides(techNext, techPrevious, techCurrent, techSlidesField, 2);
 
-  previousSlide(techPrevious, techNext,
+  moveSlides(featuresNext, featuresPrevious,
 
-    techCurrent, techSlidesField, 2);
-
-  previousSlide(featuresPrevious, featuresNext,
     featuresCurrent, featuresSlidesField, 3);
 });
