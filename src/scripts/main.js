@@ -15,6 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const featuresPrevious = document.querySelector('#prev');
   const featuresCurrent = document.querySelector('#current-featuresh');
   const featuresSlidesField = document.querySelector('#features');
+  const playButton = document.querySelector('#play');
+  const youtube = document.querySelector('#youtube');
+  const video = document.querySelector('#video');
+
+  playButton.addEventListener('click', () => {
+    youtube.classList.toggle('video__youtube--hide');
+    video.classList.toggle('video--hide');
+    youtube.src += '&autoplay=1';
+  }
+  );
 
   openButton.addEventListener('click', () => {
     menu.classList.toggle('menu--move');

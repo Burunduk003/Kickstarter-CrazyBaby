@@ -3,6 +3,19 @@
   max-width: 1440px;
   margin: 0 auto;
 
+  &--hide {
+    display: none;
+  }
+
+  &__youtube {
+    width: 100%;
+    height: 40vw;
+
+    &--hide {
+      display: none;
+    }
+  }
+
   &__img {
     width: 100%;
     min-height: 246px;

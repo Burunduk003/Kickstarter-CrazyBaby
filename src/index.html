@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Kickstarter</title>
     <link rel="stylesheet" href="./styles/main.scss">
     <link rel="icon" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -153,14 +153,24 @@
         </div>
       </div>
     </header>
-    <section class="video content__video">
+    <section class="video content__video" id="video">
       <img
         src="./images/video.png"
         alt="speakers"
         class="video__img"
       >
-      <div class="video__play"></div>
+      <div class="video__play" id="play"></div>
     </section>
+    <iframe
+      class="video__youtube video__youtube--hide"
+      id="youtube"
+      src="https://www.youtube.com/embed/VjVSYsMzmEU?rel=0&showinfo=0"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write;
+      encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
     <main class="content">
       <section class="design content__design" id="design">
         <h2 class="design__title">
@@ -179,7 +189,14 @@
             <p class="design__description">
               In 2014, a group of geeky industrial designers, engineering veterans and acoustic experts formed crazybaby. This is a bunch of passionate people who are crazy enough to think they can challenge the industry with disruptive audio products.
             </p>
-            <a href="https://www.kickstarter.com/projects/lunabycrazybaby/luna-by-crazybaby-revolutionary-wireless-speaker" class="design__link">See more about us</a>
+            <a
+              href="https://www.kickstarter.com/projects/lunabycrazybaby/luna-by-crazybaby-revolutionary-wireless-speaker"
+              class="design__link"
+              target="_blank"
+              rel="noopener"
+            >
+              See more about us
+            </a>
           </div>
         </div>
       </section>
@@ -361,13 +378,28 @@
         >
       </a>
       <div class="footer__soc-icons">
-        <a href="https://www.facebook.com/Kickstarter/" class="footer__link">
+        <a
+          href="https://www.facebook.com/Kickstarter/"
+          class="footer__link"
+          target="_blank"
+          rel="noopener"
+        >
           <img src="./images/facebook.svg" alt="facebook">
         </a>
-        <a href="https://www.instagram.com/kickstarter/" class="footer__link">
+        <a
+          href="https://www.instagram.com/kickstarter/"
+          class="footer__link"
+          target="_blank"
+          rel="noopener"
+        >
           <img src="./images/twitter.svg" alt="twitter">
         </a>
-        <a href="https://twitter.com/kickstarter" class="footer__link">
+        <a
+          href="https://twitter.com/kickstarter"
+          class="footer__link"
+          target="_blank"
+          rel="noopener"
+        >
           <img src="./images/insta.svg" alt="instagram">
         </a>
       </div>

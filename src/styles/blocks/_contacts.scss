@@ -29,7 +29,7 @@
     font-size: 16px;
     line-height: 48px;
     font-weight: 400;
-    color: $ultralight-grey;
+    color: $basic-black;
   }
 
   &__message {
@@ -43,7 +43,7 @@
     border: 1px solid $darck-grey;
     font-size: 16px;
     font-weight: 400;
-    color: $ultralight-grey;
+    color: $basic-black;
   }
 
   &__button {
@@ -53,6 +53,10 @@
     color: #fff;
     background-color: $turquoise;
     border: none;
-    transition: background-color 1s;
+    transition: box-shadow 1s;
+
+    &:hover {
+      box-shadow: $shadow;
+    }
   }
 }
