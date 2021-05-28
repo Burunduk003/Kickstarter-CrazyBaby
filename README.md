@@ -8,4 +8,4 @@
 
 ## Description
 landing page for startup
-- [DEMO LINK](https://burunduk003.github.io/Kickstarter/)
+- [DEMO LINK](https://burunduk003.github.io/Kickstarter-CrazyBaby/)
